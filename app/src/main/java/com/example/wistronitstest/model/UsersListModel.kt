@@ -1,6 +1,8 @@
 package com.example.wistronitstest.model
 
 import android.util.Log
+import com.example.wistronitstest.bean.UserInfo
+import com.example.wistronitstest.bean.UserInfoData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.*
@@ -25,7 +27,11 @@ class UsersListModel {
                 val jsonData = Gson().fromJson<List<UserInfo>>(resStr, object : TypeToken<List<UserInfo>>() {}.type)
                 Log.d("aaaaaaa",resStr)
                 Log.d("aaaaaaa", jsonData[0].login!!)
-                callBack.data(UserInfoData(jsonData))
+                callBack.data(
+                    UserInfoData(
+                        jsonData
+                    )
+                )
             }
         })
     }

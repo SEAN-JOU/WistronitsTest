@@ -1,7 +1,6 @@
 package com.example.wistronitstest.presenter
 
-import com.example.wistronitstest.model.UserInfo
-import com.example.wistronitstest.model.UserInfoData
+import com.example.wistronitstest.bean.UserInfoData
 import com.example.wistronitstest.model.UsersListModel
 import com.example.wistronitstest.view.UsersListView
 

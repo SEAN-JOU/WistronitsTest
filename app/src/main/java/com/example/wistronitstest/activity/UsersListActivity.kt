@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.wistronitstest.R
-import com.example.wistronitstest.model.UserInfoData
+import com.example.wistronitstest.bean.UserInfoData
 import com.example.wistronitstest.model.UsersListModel
 import com.example.wistronitstest.presenter.UsersListPresenter
 import com.example.wistronitstest.view.UsersListView

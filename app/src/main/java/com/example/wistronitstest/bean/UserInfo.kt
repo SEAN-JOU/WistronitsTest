@@ -1,4 +1,4 @@
-package com.example.wistronitstest.model
+package com.example.wistronitstest.bean
 
 import com.google.gson.annotations.SerializedName
 
