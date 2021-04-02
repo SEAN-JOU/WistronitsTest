@@ -8,10 +8,7 @@ import com.google.gson.internal.`$Gson$Types`
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 
-public class ApiManager {
-
-   val SERVER: String = "https://api.github.com/"
-   val USERS : String = "users"
-
-
+object ApiManager {
+  const val SERVER_USERS: String = "https://api.github.com/users"
+  const val TAG: String = "WistronitsTest"
 }

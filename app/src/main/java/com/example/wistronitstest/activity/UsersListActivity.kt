@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wistronitstest.R
 import com.example.wistronitstest.adapter.UsersListAdapter
+import com.example.wistronitstest.api.ApiManager
 import com.example.wistronitstest.bean.UsersListData
 import com.example.wistronitstest.model.UsersListModel
 import com.example.wistronitstest.presenter.UsersListPresenter
@@ -23,12 +24,16 @@ class UsersListActivity : AppCompatActivity() , UsersListView{
         presenter!!.getInfo()
     }
 
+    override fun onPause() {
+        super.onPause()
+        presenter!!.destroy()
+    }
+
     override fun showUsersListView(usersListData: UsersListData) {
         usersListAdapter = UsersListAdapter(usersListData, this)
         runOnUiThread {
             usersListRecyclerView.layoutManager = LinearLayoutManager(this)
             usersListRecyclerView.adapter = usersListAdapter
         }
-        Log.d("aaaaaaccc",usersListData.data[0].login.toString())
     }
 }
