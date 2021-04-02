@@ -2,7 +2,7 @@ package com.example.wistronitstest.model
 
 import android.util.Log
 import com.example.wistronitstest.bean.UserInfo
-import com.example.wistronitstest.bean.UserInfoData
+import com.example.wistronitstest.bean.UsersListData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.*
@@ -10,7 +10,7 @@ import java.io.IOException
 
 class UsersListModel {
     interface CallBack {
-        fun data(info: UserInfoData)
+        fun data(info: UsersListData)
     }
 
     fun getUserList(callBack: CallBack) {
@@ -28,7 +28,7 @@ class UsersListModel {
                 Log.d("aaaaaaa",resStr)
                 Log.d("aaaaaaa", jsonData[0].login!!)
                 callBack.data(
-                    UserInfoData(
+                    UsersListData(
                         jsonData
                     )
                 )

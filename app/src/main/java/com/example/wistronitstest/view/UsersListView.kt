@@ -1,8 +1,8 @@
 package com.example.wistronitstest.view
 
-import com.example.wistronitstest.bean.UserInfoData
+import com.example.wistronitstest.bean.UsersListData
 
 
 interface UsersListView {
-    fun showUsersListView(info: UserInfoData)
+    fun showUsersListView(info: UsersListData)
 }
