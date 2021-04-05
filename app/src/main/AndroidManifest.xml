@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity.UserProfileActivity">
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wistronitstest.activity.UserProfileActivity" />
         </activity>
         <activity android:name=".activity.UsersListActivity">
             <intent-filter>
